@@ -1763,7 +1763,7 @@ export default class ChatRoom extends Listenable {
 
         if (mute.length && mute.text() === 'true') {
             this.eventEmitter.emit(XMPPEvents.AUDIO_MUTED_BY_FOCUS, mute.attr('actor'));
-        } else if (mute.length && mute.text() === 'true') {
+        } else if (mute.length && mute.text() === 'false') {
             this.eventEmitter.emit(XMPPEvents.AUDIO_UNMUTED_BY_FOCUS, mute.attr('actor'));
             } else {
                 // XXX Why do we support anything but muting? Why do we encode the
